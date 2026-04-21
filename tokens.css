@@ -1,0 +1,78 @@
+/* ==========================================================================
+   tokens.css — single source of truth
+   Grid, type, color, spacing for every piece in this repo.
+   Change here to change the system. Do not restate tokens in piece files.
+   ========================================================================== */
+
+:root {
+  /* ---- Baseline ------------------------------------------------------- */
+  --baseline: 8px;
+
+  /* ---- Grid ----------------------------------------------------------- */
+  --grid-columns: 12;
+  --grid-gutter: calc(var(--baseline) * 3);   /* 24px */
+  --grid-margin: calc(var(--baseline) * 4);   /* 32px — page edge */
+  --grid-max-width: 1440px;
+
+  /* ---- Type scale — modular, ratio 1.333 ------------------------------ */
+  /* computed from 16px base; each step rounded to the half-pixel */
+  --type-xs:   0.75rem;    /* 12 */
+  --type-sm:   0.875rem;   /* 14 */
+  --type-base: 1rem;       /* 16 */
+  --type-md:   1.333rem;   /* 21.3 */
+  --type-lg:   1.777rem;   /* 28.4 */
+  --type-xl:   2.369rem;   /* 37.9 */
+  --type-2xl:  3.157rem;   /* 50.5 */
+  --type-3xl:  4.209rem;   /* 67.3 */
+  --type-4xl:  5.61rem;    /* 89.8 */
+
+  /* Line-heights locked to the baseline (multiples of --baseline) */
+  --leading-tight:  1;       /* display */
+  --leading-snug:   1.25;
+  --leading-body:   1.5;     /* 24px on 16px base = 3 baselines */
+  --leading-loose:  1.75;
+
+  /* ---- Type families -------------------------------------------------- */
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Weights — two or three, no more */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-bold:    700;
+
+  /* Letter-spacing — tight on display, neutral on body */
+  --tracking-display: -0.02em;
+  --tracking-body:     0;
+  --tracking-caps:     0.08em;
+
+  /* ---- Color ---------------------------------------------------------- */
+  --ink:     #0A0A0A;   /* not pure black — sits cleaner on screen */
+  --paper:   #F5F3EE;   /* warm neutral, closer to uncoated stock */
+  --rule:    #0A0A0A;
+
+  /* Single accent — classic Swiss red */
+  --accent:  #E30613;
+
+  /* Functional greys, used sparingly */
+  --ink-60:  rgba(10, 10, 10, 0.60);
+  --ink-30:  rgba(10, 10, 10, 0.30);
+  --ink-12:  rgba(10, 10, 10, 0.12);
+
+  /* ---- Rules / strokes ------------------------------------------------ */
+  --stroke-hair: 1px;
+  --stroke-thin: 2px;
+  --stroke-thick: 4px;
+  --stroke-heavy: 8px;
+
+  /* ---- Spacing — all multiples of the baseline ------------------------ */
+  --space-1: calc(var(--baseline) * 1);    /* 8  */
+  --space-2: calc(var(--baseline) * 2);    /* 16 */
+  --space-3: calc(var(--baseline) * 3);    /* 24 */
+  --space-4: calc(var(--baseline) * 4);    /* 32 */
+  --space-6: calc(var(--baseline) * 6);    /* 48 */
+  --space-8: calc(var(--baseline) * 8);    /* 64 */
+  --space-12: calc(var(--baseline) * 12);  /* 96 */
+  --space-16: calc(var(--baseline) * 16);  /* 128 */
+  --space-24: calc(var(--baseline) * 24);  /* 192 */
+}

@@ -1,0 +1,156 @@
+/* ==========================================================================
+   base.css — reset + baseline typography
+   Imports tokens.css. Every piece imports this.
+   ========================================================================== */
+
+@import "./tokens.css";
+
+/* ---- Reset -------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 16px;              /* anchor the modular scale */
+  line-height: var(--leading-body);
+  tab-size: 4;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--type-base);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+  color: var(--ink);
+  background: var(--paper);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern", "liga", "calt";
+}
+
+img, svg, video, canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: var(--stroke-hair) solid currentColor;
+  transition: color 0.12s linear;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: var(--stroke-thin) solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---- Typography defaults ------------------------------------------------ */
+/* Body leading locked to the baseline (16 × 1.5 = 24 = 3 × baseline).        */
+/* Display sizes use tight leading; align display blocks to the grid via      */
+/* margin, not line-height. Flush left, ragged right. No italics/underlines.  */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--type-3xl); }
+h2 { font-size: var(--type-xl);  line-height: var(--leading-snug); }
+h3 { font-size: var(--type-lg);  line-height: var(--leading-snug); letter-spacing: 0; }
+h4 { font-size: var(--type-md);  line-height: var(--leading-snug); letter-spacing: 0; }
+h5 { font-size: var(--type-base); letter-spacing: var(--tracking-caps); text-transform: uppercase; font-weight: var(--weight-medium); }
+h6 { font-size: var(--type-sm);   letter-spacing: var(--tracking-caps); text-transform: uppercase; font-weight: var(--weight-medium); }
+
+p {
+  max-width: 62ch;          /* readable measure; override where the grid calls for more */
+  text-wrap: pretty;
+}
+
+small, .caption {
+  font-size: var(--type-sm);
+  color: var(--ink-60);
+}
+
+code, kbd, pre, samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+ul, ol {
+  padding-left: var(--space-3);
+  list-style-position: outside;
+}
+
+hr {
+  border: 0;
+  border-top: var(--stroke-thin) solid var(--rule);
+  margin: var(--space-4) 0;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+/* ---- Number defaults ---------------------------------------------------- */
+/* Tabular figures wherever data appears; proportional elsewhere.            */
+
+.tabular,
+table,
+time,
+.data {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* ---- Page frame — 12-col grid scaffold --------------------------------- */
+
+.page {
+  max-width: var(--grid-max-width);
+  margin-inline: auto;
+  padding-inline: var(--grid-margin);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  column-gap: var(--grid-gutter);
+}
+
+/* Responsive: at narrow widths the 12-col logic persists but collapses      */
+/* to a coarser effective grid via span rules in piece stylesheets.          */
+@media (max-width: 720px) {
+  :root {
+    --grid-margin: var(--space-3);
+    --grid-gutter: var(--space-2);
+  }
+}

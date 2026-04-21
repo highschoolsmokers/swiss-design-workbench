@@ -1,0 +1,115 @@
+/* ==========================================================================
+   studies/die-neue-grafik — study stylesheet
+   Layout + typography only. Values come from tokens.css; the one deliberate
+   departure is the yellow ground, declared below as a piece-local token.
+   ========================================================================== */
+
+.dng {
+  --dng-ground: #EDAB00;
+  background: var(--dng-ground);
+  color: var(--ink);
+}
+
+.dng__page {
+  padding-block: var(--space-8) var(--space-12);
+}
+
+/* ---- Back-nav ---------------------------------------------------------- */
+
+.dng__crumb {
+  font-size: var(--type-sm);
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-6);
+}
+
+.dng__crumb a {
+  border-bottom: 0;
+}
+
+/* ---- Masthead ---------------------------------------------------------- */
+
+.dng__masthead {
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  align-items: start;
+  margin-bottom: var(--space-12);
+}
+
+.dng__title {
+  grid-column: 1 / span 8;
+  font-size: var(--type-4xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+}
+
+.dng__subjects {
+  grid-column: 9 / span 4;
+  list-style: none;
+  padding-left: 0;
+  font-size: var(--type-sm);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-loose);
+}
+
+/* ---- Sections ---------------------------------------------------------- */
+
+.dng__section {
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  border-top: var(--stroke-hair) solid var(--ink);
+  padding-block: var(--space-3) var(--space-12);
+}
+
+.dng__label {
+  grid-column: 1 / span 4;
+  font-size: var(--type-xs);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  line-height: var(--leading-snug);
+  margin-top: var(--space-1);
+}
+
+.dng__body {
+  grid-column: 5 / span 8;
+  font-size: var(--type-sm);
+  line-height: var(--leading-body);
+}
+
+.dng__body p + p {
+  margin-top: var(--space-2);
+}
+
+/* ---- Colophon ---------------------------------------------------------- */
+
+.dng__colophon {
+  margin-top: var(--space-8);
+  padding-top: var(--space-3);
+  border-top: var(--stroke-thick) solid var(--ink);
+  font-size: var(--type-xs);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+}
+
+/* ---- Responsive: columns collapse, grid logic survives ----------------- */
+
+@media (max-width: 720px) {
+  .dng__title {
+    grid-column: 1 / -1;
+    font-size: var(--type-3xl);
+  }
+
+  .dng__subjects {
+    grid-column: 1 / -1;
+    margin-top: var(--space-3);
+  }
+
+  .dng__label,
+  .dng__body {
+    grid-column: 1 / -1;
+  }
+
+  .dng__label {
+    margin-bottom: var(--space-2);
+  }
+}

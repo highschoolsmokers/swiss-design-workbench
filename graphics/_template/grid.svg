@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  grid.svg — visible construction for the piece.
+  A2 portrait, 420 × 594 mm. viewBox units = mm (1 unit = 1 mm).
+  6 columns × 60 mm, 5 gutters × 4 mm, 20 mm side margins, 24 mm top/bottom.
+  Baseline = 4 mm. Keep values in lock-step with poster.svg and notes.md.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 420 594"
+     width="420mm" height="594mm">
+
+  <!-- Fonts: load Inter so this file renders standalone in a browser.
+       For print delivery, convert <text> to <path> instead. -->
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap");
+    text { font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  </style>
+
+  <!-- Baseline pattern: one repeating 4 mm rule. Referenced by <rect> below. -->
+  <defs>
+    <pattern id="baseline" x="0" y="24" width="1" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="420" y2="0" stroke="#0A0A0A" stroke-opacity="0.12" stroke-width="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Paper — warm uncoated neutral, not white. -->
+  <rect width="420" height="594" fill="#F5F3EE"/>
+
+  <!-- Baseline grid: one rect tiled by the pattern above. -->
+  <g id="baseline">
+    <rect x="20" y="24" width="380" height="546" fill="url(#baseline)"/>
+  </g>
+
+  <!-- Columns: six 60-mm rects with 4-mm gutters.
+       x positions: 20, 84, 148, 212, 276, 340. -->
+  <g id="columns" fill="#E30613" fill-opacity="0.08">
+    <rect x="20"  y="24" width="60" height="546"/>
+    <rect x="84"  y="24" width="60" height="546"/>
+    <rect x="148" y="24" width="60" height="546"/>
+    <rect x="212" y="24" width="60" height="546"/>
+    <rect x="276" y="24" width="60" height="546"/>
+    <rect x="340" y="24" width="60" height="546"/>
+  </g>
+
+  <!-- Margin rules: four hairlines at the content-area edges. -->
+  <g id="margins" stroke="#0A0A0A" stroke-opacity="0.3" stroke-width="0.2" fill="none">
+    <line x1="20"  y1="24"  x2="400" y2="24"/>  <!-- top -->
+    <line x1="20"  y1="570" x2="400" y2="570"/> <!-- bottom -->
+    <line x1="20"  y1="24"  x2="20"  y2="570"/> <!-- left -->
+    <line x1="400" y1="24"  x2="400" y2="570"/> <!-- right -->
+  </g>
+
+  <!-- Label in the top margin — reads as a caption-in-caps. -->
+  <g id="labels" fill="#0A0A0A" fill-opacity="0.6">
+    <text x="20" y="16" font-size="3" font-weight="500" letter-spacing="0.24">
+      A2 · 6 COL × 60 MM · 4 MM GUTTER · 4 MM BASELINE · 20 MM MARGIN
+    </text>
+  </g>
+
+</svg>

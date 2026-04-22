@@ -162,6 +162,7 @@ Default palette: black, white, one accent. That's it unless I explicitly ask for
 - Use `viewBox` in millimeters (e.g., A2 = `0 0 420 594`) so print dimensions are literal.
 - Define the grid in `<defs>` and reference it in both `poster.svg` (hidden or as subtle underlay) and `grid.svg` (visible).
 - No raster images unless I ask. Typography and geometry are the vocabulary.
+- To start a new graphic, copy `graphics/_template/` to `graphics/<piece>/` and fill it in. Keep `graphics/_reference/svg-primer.svg` open in a text editor alongside — its inline comments are a walk-through of SVG primitives at mm scale.
 
 ## Grid Overlays
 

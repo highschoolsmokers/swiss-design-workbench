@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  poster.svg — content canvas for the piece.
+  See notes.md for the brief and grid.svg for the visible construction.
+  Grid numbers here MUST match grid.svg. If you change one, change both.
+
+  viewBox units = mm. A2 portrait 420 × 594.
+  Content area: x=20 y=24 w=380 h=546.
+  Columns: 6 × 60 mm. Column starts: 20, 84, 148, 212, 276, 340.
+  Baseline: 4 mm. A headline at y=80 sits on the 14th baseline.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 420 594"
+     width="420mm" height="594mm">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap");
+    text { font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  </style>
+
+  <!-- Baseline pattern — kept here so the grid layer below renders in isolation. -->
+  <defs>
+    <pattern id="baseline" x="0" y="24" width="1" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="420" y2="0" stroke="#0A0A0A" stroke-opacity="0.12" stroke-width="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Paper. -->
+  <rect width="420" height="594" fill="#F5F3EE"/>
+
+  <!-- Grid layer. opacity="0" for final; flip to "0.05" during review. -->
+  <g id="grid" opacity="0">
+    <rect x="20" y="24" width="380" height="546" fill="url(#baseline)"/>
+    <g id="columns" fill="#E30613" fill-opacity="0.08">
+      <rect x="20"  y="24" width="60" height="546"/>
+      <rect x="84"  y="24" width="60" height="546"/>
+      <rect x="148" y="24" width="60" height="546"/>
+      <rect x="212" y="24" width="60" height="546"/>
+      <rect x="276" y="24" width="60" height="546"/>
+      <rect x="340" y="24" width="60" height="546"/>
+    </g>
+    <g id="margins" stroke="#0A0A0A" stroke-opacity="0.3" stroke-width="0.2" fill="none">
+      <line x1="20"  y1="24"  x2="400" y2="24"/>
+      <line x1="20"  y1="570" x2="400" y2="570"/>
+      <line x1="20"  y1="24"  x2="20"  y2="570"/>
+      <line x1="400" y1="24"  x2="400" y2="570"/>
+    </g>
+  </g>
+
+  <!-- Content. Replace everything inside this group. -->
+  <g id="content" fill="#0A0A0A">
+    <!-- Placeholder headline — 42 pt ≈ 14.82 mm cap height.
+         Anchored at column 1 (x=20), baseline y=80 (row 14 × 4 mm + 24). -->
+    <text x="20" y="80" font-size="14.82" font-weight="700" letter-spacing="-0.3">
+      Replace me.
+    </text>
+    <!-- 10 pt body rule underline — 2 mm below the headline baseline. -->
+    <line x1="20" y1="84" x2="400" y2="84" stroke="#0A0A0A" stroke-width="0.5"/>
+  </g>
+
+</svg>

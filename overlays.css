@@ -33,14 +33,11 @@ body.grid-overlay::before {
 }
 
 /* ---- Baseline overlay -------------------------------------------------- */
+/* Painted as a repeating background on <body> so it scrolls with content.  */
+/* A fixed overlay would drift against the text on any non-8px-multiple     */
+/* scroll position and make verification impossible during review.          */
 
-body.baseline-overlay::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-
+body.baseline-overlay {
   background-image:
     repeating-linear-gradient(
       to bottom,
@@ -84,4 +81,9 @@ body.baseline-overlay::after {
 .overlay-toggle button[aria-pressed="true"] {
   background: var(--accent);
   color: var(--paper);
+}
+
+.overlay-toggle button:focus-visible {
+  outline: var(--stroke-thin) solid var(--accent);
+  outline-offset: var(--stroke-thin);
 }

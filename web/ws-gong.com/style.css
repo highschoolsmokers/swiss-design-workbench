@@ -1,0 +1,268 @@
+/* ==========================================================================
+   web/ws-gong.com — Swiss redesign study
+   Composition and component styling only. Every value resolves to a token
+   in tokens.css; no bespoke sizes, no ad-hoc colors, no one-off spacing.
+   ========================================================================== */
+
+.wsg__page {
+  padding-block: var(--space-6) var(--space-12);
+}
+
+/* ---- Back-nav ---------------------------------------------------------- */
+
+.wsg__crumb {
+  font-size: var(--type-sm);
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-4);
+}
+
+.wsg__crumb a {
+  border-bottom: 0;
+}
+
+/* ---- Rules ------------------------------------------------------------- */
+
+.wsg__rule {
+  border: 0;
+  border-top: var(--stroke-hair) solid var(--rule);
+  margin: 0;
+}
+
+.wsg__rule--heavy {
+  border-top-width: var(--stroke-thick);
+}
+
+/* ==========================================================================
+   Masthead
+   ========================================================================== */
+
+.wsg__masthead {
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  row-gap: var(--space-6);
+  padding-block: var(--space-4) var(--space-8);
+  align-items: start;
+}
+
+.wsg__issue,
+.wsg__date,
+.wsg__locale {
+  grid-row: 1;
+  font-size: var(--type-xs);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+}
+
+.wsg__issue     { grid-column: 1 / span 4; }
+.wsg__date      { grid-column: 5 / span 4; }
+.wsg__locale    { grid-column: 9 / span 4; text-align: right; }
+
+.wsg__issue-mark {
+  color: var(--accent);
+  font-weight: var(--weight-bold);
+}
+
+.wsg__title {
+  grid-column: 1 / span 8;
+  grid-row: 2;
+  font-size: var(--type-4xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+}
+
+.wsg__title--sub {
+  font-weight: var(--weight-regular);
+  color: var(--ink-60);
+}
+
+.wsg__lede {
+  grid-column: 9 / span 4;
+  grid-row: 2;
+  align-self: end;
+  font-size: var(--type-sm);
+  line-height: var(--leading-body);
+  max-width: 28ch;
+}
+
+/* ==========================================================================
+   Section (editorial row: number + heading + body)
+   ========================================================================== */
+
+.wsg__section {
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  padding-block: var(--space-6) var(--space-12);
+  align-items: start;
+}
+
+.wsg__section-number {
+  grid-column: 1 / span 1;
+  font-size: var(--type-md);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-60);
+  letter-spacing: 0;
+}
+
+.wsg__section-heading {
+  grid-column: 2 / span 3;
+}
+
+.wsg__section-title {
+  font-size: var(--type-xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-display);
+  margin-bottom: var(--space-1);
+}
+
+.wsg__section-dek {
+  font-size: var(--type-sm);
+  line-height: var(--leading-body);
+  color: var(--ink-60);
+  max-width: 32ch;
+}
+
+.wsg__body {
+  grid-column: 5 / span 8;
+  font-size: var(--type-base);
+  line-height: var(--leading-body);
+}
+
+.wsg__body p + p {
+  margin-top: var(--space-2);
+}
+
+/* ==========================================================================
+   Catalog placement — catalog component itself lives in base.css
+   ========================================================================== */
+
+.wsg__section > .catalog {
+  grid-column: 5 / span 8;
+}
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.wsg__contact {
+  grid-column: 5 / span 8;
+  margin: 0;
+}
+
+.wsg__contact-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: var(--grid-gutter);
+  padding-block: var(--space-2);
+  border-top: var(--stroke-hair) solid var(--ink-12);
+  font-size: var(--type-sm);
+  line-height: var(--leading-snug);
+}
+
+.wsg__contact-row:first-child {
+  border-top: 0;
+}
+
+.wsg__contact-row dt {
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  font-size: var(--type-xs);
+  color: var(--ink-60);
+  align-self: center;
+}
+
+.wsg__contact-row dd {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Colophon
+   ========================================================================== */
+
+.wsg__colophon {
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  padding-block: var(--space-4) var(--space-2);
+  font-size: var(--type-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  font-weight: var(--weight-medium);
+}
+
+.wsg__colophon-label {
+  grid-column: 1 / span 2;
+  color: var(--ink-60);
+}
+
+.wsg__colophon-body {
+  grid-column: 3 / span 8;
+  text-transform: none;
+  letter-spacing: var(--tracking-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--type-sm);
+  line-height: var(--leading-body);
+  max-width: 62ch;
+}
+
+.wsg__colophon-mark {
+  grid-column: 11 / span 2;
+  text-align: right;
+  color: var(--ink-60);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   Responsive — columns collapse, grid logic survives
+   ========================================================================== */
+
+@media (max-width: 720px) {
+  .wsg__issue,
+  .wsg__date,
+  .wsg__locale {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    text-align: left;
+  }
+
+  .wsg__title,
+  .wsg__lede {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .wsg__title {
+    font-size: var(--type-3xl);
+  }
+
+  .wsg__lede {
+    max-width: none;
+  }
+
+  .wsg__section-number {
+    grid-column: 1 / span 2;
+  }
+
+  .wsg__section-heading {
+    grid-column: 3 / span 10;
+  }
+
+  .wsg__body,
+  .wsg__section > .catalog,
+  .wsg__contact {
+    grid-column: 1 / -1;
+    margin-top: var(--space-3);
+  }
+
+  .wsg__colophon-label,
+  .wsg__colophon-body,
+  .wsg__colophon-mark {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .wsg__colophon-body {
+    margin-block: var(--space-2);
+  }
+}

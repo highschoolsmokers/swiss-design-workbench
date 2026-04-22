@@ -11,21 +11,6 @@
   padding-block: var(--space-6) var(--space-12);
 }
 
-.skip {
-  position: absolute;
-  left: -9999px;
-}
-.skip:focus-visible {
-  position: fixed;
-  top: var(--space-2);
-  left: var(--space-2);
-  padding: var(--space-1) var(--space-2);
-  background: var(--ink);
-  color: var(--paper);
-  border: 0;
-  z-index: 10001;
-}
-
 /* ---- Shared rules -------------------------------------------------------- */
 
 .rule {
@@ -68,8 +53,8 @@
 .masthead__title {
   grid-column: 1 / span 8;
   font-size: clamp(var(--type-2xl), 12vw, var(--type-4xl));
-  line-height: 0.92;
-  letter-spacing: -0.035em;
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display-tight);
   font-weight: var(--weight-bold);
 }
 
@@ -112,7 +97,7 @@
   font-variant-numeric: tabular-nums;
   letter-spacing: 0;
   line-height: 1;
-  color: var(--accent);
+  color: var(--ink-60);
 }
 
 .section__heading {
@@ -122,7 +107,7 @@
 .section__title {
   font-size: var(--type-xl);
   line-height: var(--leading-snug);
-  letter-spacing: -0.02em;
+  letter-spacing: var(--tracking-display);
   margin-bottom: var(--space-1);
 }
 
@@ -188,9 +173,13 @@
   display: inline-block;
   width: var(--space-2);
   height: var(--space-2);
-  vertical-align: -2px;
+  vertical-align: calc(-1 * var(--stroke-thin));
   background: var(--s);
   margin-right: 0.25em;
+}
+
+.swatch--paper {
+  box-shadow: inset 0 0 0 var(--stroke-hair) var(--ink);
 }
 
 /* ==========================================================================
@@ -224,68 +213,6 @@
 }
 
 /* ==========================================================================
-   Catalog — the workbench index
-   Empty state is handled via the data-empty attribute.
-   ========================================================================== */
-
-.catalog {
-  list-style: none;
-  font-variant-numeric: tabular-nums;
-}
-
-.catalog:empty::before {
-  content: attr(data-empty);
-  display: block;
-  padding-block: var(--space-3);
-  border-top: var(--stroke-hair) solid var(--ink-12);
-  border-bottom: var(--stroke-hair) solid var(--ink-12);
-  color: var(--ink-60);
-  font-size: var(--type-sm);
-  letter-spacing: var(--tracking-caps);
-  text-transform: uppercase;
-}
-
-.catalog__row {
-  display: grid;
-  grid-template-columns: 4ch 1fr 16ch 10ch;
-  gap: var(--space-3);
-  align-items: baseline;
-  padding-block: var(--space-2);
-  border-top: var(--stroke-hair) solid var(--ink-12);
-}
-.catalog__row:last-child {
-  border-bottom: var(--stroke-hair) solid var(--ink-12);
-}
-
-.catalog__index {
-  font-size: var(--type-sm);
-  color: var(--ink-60);
-  font-weight: var(--weight-medium);
-  letter-spacing: var(--tracking-caps);
-}
-
-.catalog__title {
-  font-size: var(--type-md);
-  font-weight: var(--weight-medium);
-  border-bottom: 0;
-  letter-spacing: -0.01em;
-}
-.catalog__title:hover {
-  color: var(--accent);
-}
-
-.catalog__meta {
-  font-size: var(--type-sm);
-  color: var(--ink-60);
-}
-
-.catalog__date {
-  font-size: var(--type-sm);
-  color: var(--ink-60);
-  text-align: right;
-}
-
-/* ==========================================================================
    Principles — numbered, typographic
    ========================================================================== */
 
@@ -310,7 +237,7 @@
 
 .principles li span {
   font-size: var(--type-sm);
-  color: var(--accent);
+  color: var(--ink-60);
   font-weight: var(--weight-medium);
   font-variant-numeric: tabular-nums;
   letter-spacing: var(--tracking-caps);
@@ -335,7 +262,6 @@
 
 .colophon__body {
   grid-column: 3 / span 7;
-  max-width: 62ch;
   color: var(--ink-60);
 }
 
@@ -364,5 +290,5 @@
   font-family: var(--font-mono);
   font-size: 0.9em;
   margin-left: 0.4em;
-  opacity: 0.7;
+  opacity: var(--opacity-muted);
 }

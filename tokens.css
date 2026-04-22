@@ -27,6 +27,7 @@
   --type-4xl:  5.61rem;    /* 89.8 */
 
   /* Line-heights locked to the baseline (multiples of --baseline) */
+  --leading-display: 0.92;   /* masthead display type — tighter than tight */
   --leading-tight:  1;       /* display */
   --leading-snug:   1.25;
   --leading-body:   1.5;     /* 24px on 16px base = 3 baselines */
@@ -42,9 +43,10 @@
   --weight-bold:    700;
 
   /* Letter-spacing — tight on display, neutral on body */
-  --tracking-display: -0.02em;
-  --tracking-body:     0;
-  --tracking-caps:     0.08em;
+  --tracking-display:       -0.02em;
+  --tracking-display-tight: -0.035em;  /* for very-large masthead type */
+  --tracking-body:           0;
+  --tracking-caps:           0.08em;
 
   /* ---- Color ---------------------------------------------------------- */
   --ink:     #0A0A0A;   /* not pure black — sits cleaner on screen */
@@ -58,6 +60,9 @@
   --ink-60:  rgba(10, 10, 10, 0.60);
   --ink-30:  rgba(10, 10, 10, 0.30);
   --ink-12:  rgba(10, 10, 10, 0.12);
+
+  /* ---- Opacity -------------------------------------------------------- */
+  --opacity-muted: 0.7;
 
   /* ---- Rules / strokes ------------------------------------------------ */
   --stroke-hair: 1px;

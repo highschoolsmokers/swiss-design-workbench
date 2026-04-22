@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ws-gong.com — Swiss redesign study</title>
+    <meta
+      name="description"
+      content="A single-document Swiss redesign of ws-gong.com, built against the Swiss Design Workbench token system. No images, no ornament — typography and grid only."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="../../overlays.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="wsg">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="page wsg__page">
+      <p class="wsg__crumb">
+        <a href="../../index.html">← Workbench index</a>
+      </p>
+
+      <hr class="wsg__rule wsg__rule--heavy" aria-hidden="true" />
+
+      <!-- ===================================================================
+           Masthead
+           =================================================================== -->
+      <header class="wsg__masthead grid" role="banner">
+        <p class="wsg__issue">
+          <span class="wsg__issue-mark">№</span>&nbsp;01 / 2026
+        </p>
+        <p class="wsg__date">
+          <time datetime="2026-04-21">21 April 2026</time>
+        </p>
+        <p class="wsg__locale">ws-gong.com / redesign study</p>
+
+        <h1 class="wsg__title">
+          W.&thinsp;S.<br />
+          Gong<br />
+          <span class="wsg__title--sub">Stories &amp; Systems</span>
+        </h1>
+
+        <p class="wsg__lede">
+          Fiction editor at The Rumpus. Technical writer
+          with twenty-five years in software. Building tools
+          at the intersection of language models and the
+          craft of writing.
+        </p>
+      </header>
+
+      <hr class="wsg__rule wsg__rule--heavy" aria-hidden="true" />
+
+      <main id="main">
+        <!-- ===============================================================
+             01 — Statement
+             =============================================================== -->
+        <section class="wsg__section grid" aria-labelledby="statement">
+          <h2 id="statement" class="wsg__section-number">01</h2>
+          <div class="wsg__section-heading">
+            <h3 class="wsg__section-title">Statement</h3>
+            <p class="wsg__section-dek">
+              Why this site exists, and what it collects.
+            </p>
+          </div>
+
+          <div class="wsg__body">
+            <p>
+              This is a working archive of two parallel practices:
+              a life in writing and editing, and a life in software.
+              They are not kept apart. The tools are built for the
+              writing; the writing sets the problems for the tools.
+            </p>
+            <p>
+              Everything here — essays, projects, residencies, open
+              source — is documented in the same register, on the
+              same grid, with the same typeface. The form is part of
+              the argument.
+            </p>
+          </div>
+        </section>
+
+        <hr class="wsg__rule" aria-hidden="true" />
+
+        <!-- ===============================================================
+             02 — About
+             =============================================================== -->
+        <section class="wsg__section grid" aria-labelledby="about">
+          <h2 id="about" class="wsg__section-number">02</h2>
+          <div class="wsg__section-heading">
+            <h3 class="wsg__section-title">About</h3>
+            <p class="wsg__section-dek">
+              The short version, in full sentences.
+            </p>
+          </div>
+
+          <div class="wsg__body">
+            <p>
+              W.&thinsp;S. Gong is a fiction editor at
+              <a
+                href="https://therumpus.net"
+                target="_blank"
+                rel="noopener noreferrer"
+                >The Rumpus</a
+              >
+              and a technical writer with a twenty-five-year career
+              in software. He writes short fiction and essays, and
+              builds small, literate tools at the seam between
+              large language models and the craft of writing.
+            </p>
+            <p>
+              Recent work has focused on agents that assist editors
+              without replacing them — retrieval-first pipelines,
+              verifiable citations, and human-in-the-loop review
+              surfaces.
+            </p>
+          </div>
+        </section>
+
+        <hr class="wsg__rule" aria-hidden="true" />
+
+        <!-- ===============================================================
+             03 — Narratives (catalog)
+             =============================================================== -->
+        <section class="wsg__section grid" aria-labelledby="narratives">
+          <h2 id="narratives" class="wsg__section-number">03</h2>
+          <div class="wsg__section-heading">
+            <h3 class="wsg__section-title">Narratives</h3>
+            <p class="wsg__section-dek">
+              Short fiction and essays. Selected; not exhaustive.
+            </p>
+          </div>
+
+          <ol class="catalog">
+            <li class="catalog__row">
+              <span class="catalog__index">N01</span>
+              <a class="catalog__title" href="#">High School Smokers</a>
+              <span class="catalog__meta">Essay · Substack</span>
+              <time class="catalog__date tabular" datetime="2026-03-18"
+                >2026-03-18</time
+              >
+            </li>
+            <li class="catalog__row">
+              <span class="catalog__index">N02</span>
+              <a class="catalog__title" href="#">A Letter to My Editor</a>
+              <span class="catalog__meta">Essay · The Rumpus</span>
+              <time class="catalog__date tabular" datetime="2026-01-29"
+                >2026-01-29</time
+              >
+            </li>
+            <li class="catalog__row">
+              <span class="catalog__index">N03</span>
+              <a class="catalog__title" href="#">Room at the Tramway Stop</a>
+              <span class="catalog__meta">Short fiction</span>
+              <time class="catalog__date tabular" datetime="2025-11-04"
+                >2025-11-04</time
+              >
+            </li>
+          </ol>
+        </section>
+
+        <hr class="wsg__rule" aria-hidden="true" />
+
+        <!-- ===============================================================
+             04 — Residencies (catalog)
+             =============================================================== -->
+        <section class="wsg__section grid" aria-labelledby="residencies">
+          <h2 id="residencies" class="wsg__section-number">04</h2>
+          <div class="wsg__section-heading">
+            <h3 class="wsg__section-title">Residencies</h3>
+            <p class="wsg__section-dek">
+              Invited and self-directed. Chronological, most
+              recent first.
+            </p>
+          </div>
+
+          <ol class="catalog">
+            <li class="catalog__row">
+              <span class="catalog__index">R01</span>
+              <a class="catalog__title" href="#">Ragdale Foundation</a>
+              <span class="catalog__meta">Lake Forest, IL · Fiction</span>
+              <time class="catalog__date tabular" datetime="2025-09-01"
+                >2025-09</time
+              >
+            </li>
+            <li class="catalog__row">
+              <span class="catalog__index">R02</span>
+              <a class="catalog__title" href="#">Vermont Studio Center</a>
+              <span class="catalog__meta">Johnson, VT · Fiction</span>
+              <time class="catalog__date tabular" datetime="2024-06-01"
+                >2024-06</time
+              >
+            </li>
+            <li class="catalog__row">
+              <span class="catalog__index">R03</span>
+              <a class="catalog__title" href="#">Anderson Center</a>
+              <span class="catalog__meta">Red Wing, MN · Fiction</span>
+              <time class="catalog__date tabular" datetime="2023-10-01"
+                >2023-10</time
+              >
+            </li>
+          </ol>
+        </section>
+
+        <hr class="wsg__rule" aria-hidden="true" />
+
+        <!-- ===============================================================
+             05 — Code (catalog)
+             =============================================================== -->
+        <section class="wsg__section grid" aria-labelledby="code">
+          <h2 id="code" class="wsg__section-number">05</h2>
+          <div class="wsg__section-heading">
+            <h3 class="wsg__section-title">Code</h3>
+            <p class="wsg__section-dek">
+              Tools for writing and editing. Representative
+              selection.
+            </p>
+          </div>
+
+          <ol class="catalog">
+            <li class="catalog__row">
+              <span class="catalog__index">C01</span>
+              <a class="catalog__title" href="#">Colophon MCP</a>
+              <span class="catalog__meta"
+                >MCP server · Bibliography for LLMs</span
+              >
+              <time class="catalog__date tabular" datetime="2026-02-11"
+                >2026-02</time
+              >
+            </li>
+            <li class="catalog__row">
+              <span class="catalog__index">C02</span>
+              <a class="catalog__title" href="#">Lit-Verity MCP</a>
+              <span class="catalog__meta"
+                >MCP server · Citation verification</span
+              >
+              <time class="catalog__date tabular" datetime="2025-12-03"
+                >2025-12</time
+              >
+            </li>
+            <li class="catalog__row">
+              <span class="catalog__index">C03</span>
+              <a class="catalog__title" href="#">Submission Watcher</a>
+              <span class="catalog__meta"
+                >Agent · Tracks literary submissions</span
+              >
+              <time class="catalog__date tabular" datetime="2025-08-20"
+                >2025-08</time
+              >
+            </li>
+          </ol>
+        </section>
+
+        <hr class="wsg__rule" aria-hidden="true" />
+
+        <!-- ===============================================================
+             06 — Contact
+             =============================================================== -->
+        <section class="wsg__section grid" aria-labelledby="contact">
+          <h2 id="contact" class="wsg__section-number">06</h2>
+          <div class="wsg__section-heading">
+            <h3 class="wsg__section-title">Contact</h3>
+            <p class="wsg__section-dek">Plain text. No form.</p>
+          </div>
+
+          <dl class="wsg__contact">
+            <div class="wsg__contact-row">
+              <dt>Email</dt>
+              <dd>
+                <a href="mailto:w@ws-gong.com">w@ws-gong.com</a>
+              </dd>
+            </div>
+            <div class="wsg__contact-row">
+              <dt>Substack</dt>
+              <dd>
+                <a
+                  href="https://highschoolsmokers.substack.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >highschoolsmokers.substack.com</a
+                >
+              </dd>
+            </div>
+            <div class="wsg__contact-row">
+              <dt>Editorial</dt>
+              <dd>
+                <a
+                  href="https://therumpus.net"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >The Rumpus — Fiction</a
+                >
+              </dd>
+            </div>
+          </dl>
+        </section>
+      </main>
+
+      <hr class="wsg__rule wsg__rule--heavy" aria-hidden="true" />
+
+      <!-- ===================================================================
+           Colophon
+           =================================================================== -->
+      <footer class="wsg__colophon grid" role="contentinfo">
+        <p class="wsg__colophon-label">Colophon</p>
+        <p class="wsg__colophon-body">
+          Set in Inter. Composed on a 12-column grid with an
+          8-pixel baseline. Every value in this document
+          resolves to a token in
+          <code>tokens.css</code>. No images, no ornament.
+          Served by Vite. A study, not the live site.
+        </p>
+        <p class="wsg__colophon-mark">SDW · W01 · 2026</p>
+      </footer>
+    </div>
+
+    <!-- ===================================================================
+         Overlay toggle — keyboard: G (grid), B (baseline)
+         =================================================================== -->
+    <div class="overlay-toggle" role="group" aria-label="Debug overlays">
+      <button type="button" data-overlay="grid-overlay" aria-pressed="false">
+        Grid <kbd>G</kbd>
+      </button>
+      <button type="button" data-overlay="baseline-overlay" aria-pressed="false">
+        Baseline <kbd>B</kbd>
+      </button>
+    </div>
+
+    <script type="module" src="../../index.js"></script>
+  </body>
+</html>

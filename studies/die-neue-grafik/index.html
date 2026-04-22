@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Die Neue Grafik — Swiss Design Workbench</title>
+    <meta
+      name="description"
+      content="A design study of Swiss International Typographic Style — Bauhaus grid systems, modernist typography, and editorial composition."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="../../overlays.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="dng">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="page dng__page">
+      <p class="dng__crumb">
+        <a href="../../index.html">← Workbench index</a>
+      </p>
+
+      <header class="dng__masthead grid" role="banner">
+        <h1 class="dng__title">
+          Die<br />
+          Neue<br />
+          Grafik<br />
+          Design
+        </h1>
+
+        <ul class="dng__subjects" aria-label="Subjects">
+          <li>The Bauhaus</li>
+          <li>Swiss Modernism</li>
+          <li>Swiss Graphic Design</li>
+          <li>The International Typographic Style</li>
+          <li>Russian Constructivism</li>
+          <li>Typography</li>
+          <li>Illustration</li>
+        </ul>
+      </header>
+
+      <main id="main">
+        <section class="dng__section grid" aria-labelledby="bauhaus">
+          <h2 id="bauhaus" class="dng__label">
+            The Bauhaus 1919&thinsp;&ndash;&thinsp;1933
+          </h2>
+          <div class="dng__body">
+            <p>
+              Bauhaus was a school in Germany that combined crafts and the fine
+              arts, and was famous for the approach to design that it published
+              and taught. It operated from 1919 to 1933. At that time the German
+              term Bauhaus, literally &ldquo;house of construction&rdquo;, stood
+              for &ldquo;School of Building&rdquo;. The Bauhaus school was
+              founded by Walter Gropius in Weimar. In spite of its name, and the
+              fact that its founder was an architect, the Bauhaus did not have
+              an architecture department during the first years of its
+              existence. Nonetheless it was founded with the idea of creating a
+              &lsquo;total&rsquo; work of art in which all arts, including
+              architecture, would eventually be brought together.
+            </p>
+            <p>
+              The Bauhaus style became one of the most influential currents in
+              Modernist architecture and modern design. The Bauhaus had a
+              profound influence upon subsequent developments in art,
+              architecture, graphic design, interior design, industrial design,
+              and typography.
+            </p>
+          </div>
+        </section>
+
+        <section class="dng__section grid" aria-labelledby="its">
+          <h2 id="its" class="dng__label">
+            The International<br />
+            Typographic<br />
+            Style&thinsp;/<br />
+            The Swiss<br />
+            Style
+          </h2>
+          <div class="dng__body">
+            <p>
+              The International Typographic Style, also known as the Swiss
+              Style, is a graphic design style developed in Switzerland in the
+              1950s that emphasises cleanliness, readability, and objectivity.
+              Hallmarks of the style are asymmetric layouts, use of a grid,
+              sans-serif typefaces like Akzidenz-Grotesk, and flush-left,
+              ragged-right text. The style is also associated with a preference
+              for photography in place of illustrations or drawings. Many of the
+              early International Typographic Style works featured typography as
+              a primary design element in addition to its use in text, and it is
+              for this that the style is named.
+            </p>
+          </div>
+        </section>
+
+        <section class="dng__section grid" aria-labelledby="modernism">
+          <h2 id="modernism" class="dng__label">
+            Swiss Graphic Design&thinsp;/<br />
+            Modernism
+          </h2>
+          <div class="dng__body">
+            <p>
+              Swiss graphic design and &ldquo;the Swiss Style&rdquo; are crucial
+              elements in the history of modernism. During the 1920s and
+              &rsquo;30s, skills traditionally associated with Swiss industry,
+              particularly pharmaceuticals and mechanical engineering, were
+              matched by those of the country&rsquo;s graphic designers, who
+              produced their advertising and technical literature. These
+              pioneering graphic artists saw design as part of industrial
+              production and searched for anonymous, objective visual
+              communication. They chose photographic images rather than
+              illustration, and typefaces that were industrial-looking rather
+              than those designed for books.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="dng__colophon" role="contentinfo">
+        <p>
+          Swiss Design Workbench · Studies · Set in Inter on a 12-column grid
+          with an 8-pixel baseline.
+        </p>
+      </footer>
+    </div>
+
+    <div class="overlay-toggle" role="group" aria-label="Debug overlays">
+      <button type="button" data-overlay="grid-overlay" aria-pressed="false">
+        Grid <kbd>G</kbd>
+      </button>
+      <button type="button" data-overlay="baseline-overlay" aria-pressed="false">
+        Baseline <kbd>B</kbd>
+      </button>
+    </div>
+
+    <script type="module" src="../../index.js"></script>
+  </body>
+</html>
